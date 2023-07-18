@@ -59,24 +59,28 @@ $hotels = [
         <h1>Hotels</h1>
 
         <table class="table">
-            <?php foreach ($hotels as $hotel) : ?>
-                <thead>
-                    <tr>
-                        <?php foreach ($hotel as $key => $value) : ?>
-                            <th scope="col"><?= $key ?></th>
-                        <?php endforeach ?>
-                    </tr>
-                </thead>
-                <tbody>
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Parcheggio</th>
+                    <th scope="col">Voto</th>
+                    <th scope="col">Distanza dal centro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($hotels as $hotel) : ?>
                     <tr>
                         <th scope="row"><?= $hotel['name'] ?></th>
                         <td><?= $hotel['description']  ?></td>
                         <td class="ps-4"><?= $hotel['parking'] === true ? '&#10004;' : '&#10060;' ?></td>
                         <td class="ps-4"><?= $hotel['vote'] ?></td>
                         <td class="ps-4"><?= $hotel['distance_to_center'] ?> km</td>
+                    </tr>
+                <?php endforeach ?>
 
-                </tbody>
-            <?php endforeach ?>
+
+            </tbody>
         </table>
 
 
