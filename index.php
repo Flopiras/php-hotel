@@ -39,6 +39,16 @@ $hotels = [
     ],
 
 ];
+
+$hasParking = $_GET['parking'] === 'yes';
+
+$parkingHotels = [];
+foreach ($hotels as $key => $value) {
+
+    $parkingHotels = array_filter($hotels);
+    var_dump($parkingHotels);
+}
+
 ?>
 
 
@@ -59,29 +69,29 @@ $hotels = [
         <h1>Hotels</h1>
 
         <!-- form -->
-        <form action="index.php">
+        <form action="index.php" method="$_GET">
             <!-- radios -->
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="parking" id="parking">
+                <input class="form-check-input" type="radio" name="parking" value="yes" id="parking">
                 <label class="form-check-label" for="parking">
                     Hotels con parcheggio
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="parking" id="no_parking" checked>
+                <input class="form-check-input" type="radio" name="parking" value="no" id="no_parking">
                 <label class="form-check-label" for="no_parking">
                     Hotels senza parcheggio
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="parking" id="all">
+                <input class="form-check-input" type="radio" name="parking" value="all" id="all" checked>
                 <label class="form-check-label" for="all">
                     Tutti gli hotels
                 </label>
             </div>
 
             <!-- button -->
-            <button type="button" class="btn btn-primary my-2">Filtra</button>
+            <button type="submit" class="btn btn-primary my-2">Filtra</button>
         </form>
 
         <!-- table -->
@@ -101,6 +111,7 @@ $hotels = [
                         <th scope="row"><?= $hotel['name'] ?></th>
                         <td><?= $hotel['description']  ?></td>
                         <td class="ps-4"><?= $hotel['parking'] === true ? '&#10004;' : '&#10060;' ?></td>
+
                         <td class="ps-4"><?= $hotel['vote'] ?></td>
                         <td class="ps-4"><?= $hotel['distance_to_center'] ?> km</td>
                     </tr>
