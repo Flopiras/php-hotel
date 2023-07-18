@@ -55,8 +55,8 @@ $hotels = [
 </head>
 
 <body>
-    <div class="container">
-
+    <div class="container mt-4">
+        <h1>Hotels</h1>
         <ul>
             <?php foreach ($hotels as $hotel) : ?>
                 <?php foreach ($hotel as $key => $values) : ?>
