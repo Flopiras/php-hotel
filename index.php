@@ -58,6 +58,7 @@ $hotels = [
     <div class="container mt-4">
         <h1>Hotels</h1>
 
+        <!-- table -->
         <table class="table">
             <thead>
                 <tr>
@@ -78,8 +79,6 @@ $hotels = [
                         <td class="ps-4"><?= $hotel['distance_to_center'] ?> km</td>
                     </tr>
                 <?php endforeach ?>
-
-
             </tbody>
         </table>
 
