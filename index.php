@@ -51,7 +51,14 @@ $hotels = [
 </head>
 
 <body>
+    <ul>
+        <?php foreach ($hotels as $hotel) : ?>
+            <?php foreach ($hotel as $key => $values) : ?>
+                <li><strong><?= $key ?></strong> <?= $values ?></li>
 
+            <?php endforeach ?>
+        <?php endforeach ?>
+    </ul>
 </body>
 
 </html>
