@@ -41,6 +41,7 @@ $hotels = [
 ];
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,17 +49,23 @@ $hotels = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
+
+    <!-- bootstrap -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css' />
 </head>
 
 <body>
-    <ul>
-        <?php foreach ($hotels as $hotel) : ?>
-            <?php foreach ($hotel as $key => $values) : ?>
-                <li><strong><?= $key ?></strong> <?= $values ?></li>
+    <div class="container">
 
+        <ul>
+            <?php foreach ($hotels as $hotel) : ?>
+                <?php foreach ($hotel as $key => $values) : ?>
+                    <li><strong><?= $key ?></strong> <?= $values ?></li>
+
+                <?php endforeach ?>
             <?php endforeach ?>
-        <?php endforeach ?>
-    </ul>
+        </ul>
+    </div>
 </body>
 
 </html>
