@@ -58,6 +58,32 @@ $hotels = [
     <div class="container mt-4">
         <h1>Hotels</h1>
 
+        <!-- form -->
+        <form action="index.php">
+            <!-- radios -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="parking" id="parking">
+                <label class="form-check-label" for="parking">
+                    Hotels con parcheggio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="parking" id="no_parking" checked>
+                <label class="form-check-label" for="no_parking">
+                    Hotels senza parcheggio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="parking" id="all">
+                <label class="form-check-label" for="all">
+                    Tutti gli hotels
+                </label>
+            </div>
+
+            <!-- button -->
+            <button type="button" class="btn btn-primary my-2">Filtra</button>
+        </form>
+
         <!-- table -->
         <table class="table">
             <thead>
