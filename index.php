@@ -71,6 +71,7 @@ $hotels = [
                     <tr>
                         <th scope="row"><?= $hotel['name'] ?></th>
                         <td><?= $hotel['description']  ?></td>
+                        <td class="ps-4"><?= $hotel['parking'] === true ? '&#10004;' : '&#10060;' ?></td>
                         <td><?= $hotel['vote'] ?></td>
                         <td><?= $hotel['distance_to_center'] ?></td>
 
