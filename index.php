@@ -40,14 +40,17 @@ $hotels = [
 
 ];
 
-$hasParking = $_GET['parking'] === 'yes';
+// $hasParking = $_GET['parking'] === 'yes';
 
 $parkingHotels = [];
-foreach ($hotels as $key => $value) {
-
-    $parkingHotels = array_filter($hotels);
-    var_dump($parkingHotels);
+foreach ($hotels as $hotel) {
+    if ($hotel['parking']) $parkingHotels[] = $hotel;
 }
+
+var_dump($parkingHotels);
+
+
+
 
 ?>
 
